@@ -1,0 +1,147 @@
+* Emacs.d
+
+My .emacs.d/ home directory.
+
+** Preface
+
+This repository contains my emacs24 configuration.
+
+It's largely inspired from [[https://githu.com/bbatsov/prelude/][Prelude]] that I have used few years!
+
+I have ported my old [[https://github.com/Sliim/prelude-personal][prelude-personal]] configuration into a from scratch repository, to have a fresh, faster emacs configuration.
+Prelude fonctionnalities may be added by cloning git submodules.
+
+** Installation
+
+*Cask* is required to install packages dependencies.
+See install instructions [[http://cask.github.io/installation/][here]].
+Clone this repository in your home directory:
+#+BEGIN_SRC shell
+git clone https://github.com/Sliim/emacs.d ~/.emacs.d
+#+END_SRC
+
+To install prelude's features (core functions and prelude's modules will me available):
+Clone submodule:
+#+BEGIN_SRC shell
+git submodule init
+git submodule update
+#+END_SRC
+
+And enable ~emacsd-prelude-module.el~ in ~/modules.el~
+
+Install elpa package dependencies
+#+BEGIN_SRC shell
+cd ~/.emacs.d
+cask install
+#+END_SRC
+
+Start emacs!
+
+** Tree
+*** core/
+My emacs.d core library, contains general configuration and some ~prelude-editor.el~ stuff.
+*** elisp/
+Contains my emacs-lisp code that I've not yet packaged.
+  - ~skbd.el~ is a global minor mode to enable/disable my custom keybindings.
+  - ~projext.el~ provides cool stuff to interact inside project with ~projectile~ and ~project-persist~.
+*** modules/
+Is a set of personal modules. See modules.el to enable/disable modules.
+*** modules.el
+Contains enabled modules definitions. Simply require provided module..
+*** prelude/
+Is prelude project - https://github.com/bbatsov/prelude
+This directory will be present only if you install git submodules, it contains prelude repository.
+There is a prelude modules in modules/ directory to enable prelude's features. Enable it and prelude-core.el and defined prelude's modules will be loaded.
+*** prelude-modules.el
+Set of prelude's modules to enable.
+*** reveal.js/
+Reveal.js code source, will be present only if you install submodules.
+*** themes/
+Drop here your custom themes.
+*** var/
+Contains cache files, savefiles etc..
+*** vendor/
+Some package that are not packaged with package.el. Actually there is:
+  - [[https://github.com/emacsmirror/auto-complete-etags][auto-complete-etags.el]]
+  - [[https://github.com/jixiuf/helm-etags-plus][helm-etags+.el]]
+
+** Keybindings
+*** Skbd
+**** general
+| Keybinding | Command                                |
+|------------+----------------------------------------|
+| ~C-o a~    | ~auto-complete~                        |
+| ~C-o b~    | ~emacsd-helm-buffers-right-side~       |
+| ~C-o d~    | ~direx:jump-to-directory-other-window~ |
+| ~C-o i~    | ~iedit-mode~                           |
+| ~C-o k~    | ~set-cmd-to-kbd~                       |
+| ~C-o s~    | ~eshell~                               |
+| ~C-o t~    | ~proced~                               |
+| ~C-o w~    | ~whitespace-mode~                      |
+
+**** helm
+| Keybinding | Command               |
+| ~C-o h f~  | ~helm-find-files~     |
+| ~C-o h g~  | ~helm-git-find-files~ |
+| ~C-o h p~  | ~helm-projectile~     |
+| ~C-o h q~  | ~helm-quickrun~       |
+
+**** projext / project-persist
+| Keybinding  | Command                         |   |
+| ~C-o p c a~ | ~projext-clean-project~         |   |
+| ~C-o p c d~ | ~projext-clean-project-desktop~ |   |
+| ~C-o p c t~ | ~projext-clean-project-tags~    |   |
+| ~C-o p d~   | ~project-persist-delete~        |   |
+| ~C-o p f~   | ~projext-find~                  |   |
+| ~C-o p h~   | ~helm-project-persist~          |   |
+| ~C-o p i~   | ~projext-show-current-project~  |   |
+| ~C-o p k~   | ~project-persist-close~         |   |
+| ~C-o p n~   | ~project-persist-create~        |   |
+| ~C-o p s~   | ~project-persist-save~          |   |
+| ~C-o p t~   | ~projext-regenerate-tags~                              |   |
+
+**** emms
+| Keybinding | Command                             |
+| ~C-o e a~  | ~emms-add-directory-tree~           |
+| ~C-o e b~  | ~emms-previous~                     |
+| ~C-o e d~  | ~emms-play-playlist-directory-tree~ |
+| ~C-o e h~  | ~helm-emms~                         |
+| ~C-o e l~  | ~emms-smart-browse~                 |
+| ~C-o e n~  | ~emms-next~                         |
+| ~C-o e p~  | ~emms-pause~                        |
+
+**** flymakes
+| Keybinding | Command                   |
+| ~C-o f n~  | ~flymake-goto-next-error~ |
+| ~C-o f p~  | ~flymake-goto-prev-error~ |
+
+**** quickrun
+| Keybinding | Command                   |
+| ~C-o q a~  | ~quickrun-with-arg~       |
+| ~C-o q e~  | ~quickrun-region~         |
+| ~C-o q q~  | ~quickrun~                |
+| ~C-o q r~  | ~quickrun-replace-region~ |
+| ~C-o q s~  | ~quickrun-shell~          |
+
+**** magit
+| Keybinding | Command        |
+| ~C-o g s~  | ~magit-status~ |
+| ~C-o g l~  | ~magit-log~    |
+
+*** Skbd module
+| Keybinding  | Command               |
+| ~M-x~       | ~helm-M-x~            |
+| ~M-<up>~    | ~windmove-up~         |
+| ~M-<down>~  | ~windmove-down~       |
+| ~M-<left>~  | ~windmove-left~       |
+| ~M-<right>~ | ~windmove-right~      |
+| ~C-x C-b~   | ~ibuffer~             |
+| ~C-+~       | ~text-scale-increase~ |
+| ~C--~       | ~text-scale-decrease~ |
+| ~C-x g~     | ~magit-status~        |
+| ~C-c h~     | ~helm-mini~           |
+
+*** Prelude module
+| Keybinding | Command                                    |
+| ~C-c d~    | ~prelude-duplicate-current-line-or-region~ |
+| ~C-c b~    | ~prelude-switch-to-previous-buffer~        |

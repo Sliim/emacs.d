@@ -1,0 +1,6 @@
+[submodule "prelude"]
+	path = prelude
+	url = https://github.com/bbatsov/prelude
+[submodule "reveal.js"]
+	path = reveal.js
+	url = https://github.com/hakimel/reveal.js.git
