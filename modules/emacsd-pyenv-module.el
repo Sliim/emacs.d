@@ -29,7 +29,7 @@
 
 ;;; Code:
 
-(defvar pyenv-path "/home/sliim/.pyenv"
+(defvar pyenv-path "~/.pyenv"
   "pyenv root directory.")
 
 (when (file-exists-p pyenv-path)
