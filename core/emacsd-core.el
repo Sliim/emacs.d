@@ -91,6 +91,7 @@ This function run external shell command `python -m json.tool` on current region
 
 (require 'helm-github-stars)
 (setq helm-github-stars-username "Sliim")
+(setq helm-github-stars-cache-file (expand-file-name "hgs-cache" emacsd-var-dir))
 
 ;; Setup Project-persist, projectile and projext
 (require 'project-persist)
