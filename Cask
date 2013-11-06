@@ -57,7 +57,7 @@
 (depends-on "project-persist")
 (depends-on "helm-projectile")
 (depends-on "helm-project-persist")
-(depends-on "helm-git")
+(depends-on "helm-ls-git")
 (depends-on "helm-github-stars")
 (depends-on "auto-complete")
 (depends-on "iedit")

@@ -51,7 +51,7 @@
 (define-key skbd-mode-map (kbd "C-+") 'text-scale-increase)
 (define-key skbd-mode-map (kbd "C--") 'text-scale-decrease)
 (define-key skbd-mode-map (kbd "C-x g") 'magit-status)
-(define-key skbd-mode-map (kbd "C-c h") 'helm-mini)
+(define-key skbd-mode-map (kbd "C-c h") 'helm-custom)
 
 (provide 'emacsd-skbd-module)
 

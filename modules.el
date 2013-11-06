@@ -45,5 +45,6 @@
 (require 'emacsd-powerline-module)
 (require 'emacsd-skbd-module)
 (require 'emacsd-reveal-module)
+(require 'emacsd-helm-module)
 
 ;;; modules.el ends here

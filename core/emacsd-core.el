@@ -72,36 +72,13 @@ This function run external shell command `python -m json.tool` on current region
       vc-follow-symlinks t
       inhibit-startup-screen t)
 
-;; Helm configuration
-(require 'helm)
-(require 'helm-aliases)
-(require 'helm-git)
-(require 'helm-etags+)
-(defun emacsd-helm-buffers-right-side ()
-  "Special helm settings to list buffers in right side."
-  (interactive)
-  (let ((initial-helm-split-window-default-side helm-split-window-default-side))
-    (setq helm-split-window-default-side (quote right))
-    (helm-buffers-list)
-    (setq helm-split-window-default-side initial-helm-split-window-default-side)))
-
-(setq helm-buffers-favorite-modes (quote (emacs-lisp-mode org-mode php-mode ruby-mode python-mode shell-script-mode))
-      helm-follow-mode-persistent t)
-(setq helm-etags+-use-short-file-name 'absolute)
-
-(require 'helm-github-stars)
-(setq helm-github-stars-username "Sliim")
-(setq helm-github-stars-cache-file (expand-file-name "hgs-cache" emacsd-var-dir))
-
 ;; Setup Project-persist, projectile and projext
 (require 'project-persist)
-(require 'helm-project-persist)
 (setq project-persist-settings-dir (expand-file-name "project-persist" emacsd-var-dir))
 (setq project-persist-auto-save-global nil)
 
 (require 'projectile)
 (require 'diminish)
-(require 'helm-projectile)
 (setq projectile-cache-file (expand-file-name  "projectile.cache" savefile-dir))
 (projectile-global-mode t)
 (diminish 'projectile-mode "Prjl")
