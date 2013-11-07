@@ -36,6 +36,7 @@
 (require 'helm-etags+)
 (require 'helm-project-persist)
 (require 'helm-projectile)
+(require 'helm-swoop)
 
 (setq helm-buffers-favorite-modes (quote (emacs-lisp-mode org-mode php-mode ruby-mode python-mode shell-script-mode))
       helm-follow-mode-persistent t)

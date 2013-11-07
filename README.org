@@ -89,11 +89,13 @@ Start emacs!
 | ~C-o w~    | ~whitespace-mode~                      |
 
 **** helm
-| Keybinding | Command               |
-| ~C-o h f~  | ~helm-find-files~     |
-| ~C-o h g~  | ~helm-git-find-files~ |
-| ~C-o h p~  | ~helm-projectile~     |
-| ~C-o h q~  | ~helm-quickrun~       |
+| Keybinding | Command             |
+| ~C-o h f~  | ~helm-find-files~   |
+| ~C-o h g~  | ~helm-ls-git-ls~    |
+| ~C-o h p~  | ~helm-projectile~   |
+| ~C-o h q~  | ~helm-quickrun~     |
+| ~C-o h s~  | ~helm-github-stars~ |
+| ~C-o h w~  | ~helm-swoop~        |
 
 **** projext / project-persist
 | Keybinding  | Command                         |
@@ -148,7 +150,7 @@ Start emacs!
 | ~C-+~       | ~text-scale-increase~ |
 | ~C--~       | ~text-scale-decrease~ |
 | ~C-x g~     | ~magit-status~        |
-| ~C-c h~     | ~helm-mini~           |
+| ~C-c h~     | ~helm-custom~         |
 
 *** Prelude module
 | Keybinding | Command                                    |
