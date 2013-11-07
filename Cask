@@ -96,5 +96,6 @@
 (depends-on "direx")
 (depends-on "quickrun")
 (depends-on "git-messenger")
+(depends-on "jabber")
 
 ;;; Cask ends here

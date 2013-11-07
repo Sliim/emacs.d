@@ -1,14 +1,14 @@
-;;; modules.el --- Emacs.d.
+;;; emacsd-jabber-module.el --- Emacs.d modules.
 ;;
 ;; Author: Sliim <sliim@mailoo.org>
 ;; Version: 1.0.0
-;; Keywords: emacs.d
+;; Keywords: emacs.d modules
 
 ;; This file is not part of GNU Emacs.
 
 ;;; Commentary:
 
-;; Emacs.d modules to use
+;; Personal Emacs.d Jabber module
 
 ;;; License:
 
@@ -29,23 +29,12 @@
 
 ;;; Code:
 
-(require 'emacsd-prelude-module)
-(require 'emacsd-prog-module)
-(require 'emacsd-pyenv-module)
-(require 'emacsd-python-module)
-(require 'emacsd-php-module)
-(require 'emacsd-ac-module)
-(require 'emacsd-direx-module)
-(require 'emacsd-emms-module)
-(require 'emacsd-eshell-module)
-(require 'emacsd-git-messenger-module)
-(require 'emacsd-javascript-module)
-(require 'emacsd-markdown-module)
-(require 'emacsd-popwin-module)
-(require 'emacsd-powerline-module)
-(require 'emacsd-skbd-module)
-(require 'emacsd-reveal-module)
-(require 'emacsd-helm-module)
-(require 'emacsd-jabber-module)
+(require 'jabber)
+(setq jabber-history-enabled t)
+(setq jabber-history-dir (expand-file-name "jabber-history" emacsd-var-dir))
+(setq jabber-avatar-cache-directory (expand-file-name "jabber-avatar-cache" emacsd-var-dir))
+(add-hook 'jabber-alert-message-hooks 'jabber-message-libnotify)
 
-;;; modules.el ends here
+(provide 'emacsd-jabber-module)
+
+;;; emacsd-jabber-module.el ends here
