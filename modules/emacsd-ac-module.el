@@ -35,6 +35,7 @@
 (setq ac-auto-start nil)                ;not automatically start
 (setq ac-dwim 3)                        ;Do what i mean
 (setq ac-override-local-map nil)        ;don't override local map
+(setq ac-comphist-file (expand-file-name "ac-comphist.dat" emacsd-var-dir))
 (setq ac-sources '(ac-source-yasnippet ac-source-abbrev ac-source-words-in-buffer))
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()

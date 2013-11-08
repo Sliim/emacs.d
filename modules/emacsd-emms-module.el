@@ -35,9 +35,18 @@
 (require 'emms-info-mp3info)
 (require 'emms-browser)
 
+(defvar emacsd-emms-dir (expand-file-name "emms" emacsd-var-dir)
+  "Directory for emms cache, history, etc.. files.")
+
 (emms-standard)
 (emms-default-players)
+
 (setq emms-source-file-default-directory "~/musics/")
+(setq emms-score-file (expand-file-name "scores" emacsd-emms-dir))
+(setq emms-stream-bookmarks-file (expand-file-name "streams" emacsd-emms-dir))
+(setq emms-history-file (expand-file-name "history" emacsd-emms-dir))
+(setq emms-cache-file (expand-file-name "cache" emacsd-emms-dir))
+
 (add-to-list 'emms-info-functions 'emms-info-mp3info)
 
 

@@ -35,9 +35,9 @@
 
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
+      `((".*" . ,emacsd-backup-dir)))
 (setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
+      `((".*" ,savefile-dir t)))
 
 ;; smart pairing for all
 (require 'smartparens-config)

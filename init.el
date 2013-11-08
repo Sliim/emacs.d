@@ -49,6 +49,10 @@
   "Cask root directory.")
 (defvar emacsd-elpa-dir (expand-file-name (concat emacs-version "/elpa") emacsd-cask-dir)
   "Elpa packages root directory.")
+(defvar emacsd-backup-dir (expand-file-name "backup" emacsd-var-dir)
+  "This folder stores all the backup files.")
+(unless (file-exists-p emacsd-backup-dir)
+  (make-directory emacsd-backup-dir))
 
 (defvar savefile-dir (expand-file-name "savefile" emacsd-var-dir)
   "This folder stores all the automatically generated save/history-files.")
