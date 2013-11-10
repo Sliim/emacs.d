@@ -46,6 +46,5 @@
 (require 'emacsd-skbd-module)
 (require 'emacsd-reveal-module)
 (require 'emacsd-helm-module)
-(require 'emacsd-jabber-module)
 
 ;;; modules.el ends here
