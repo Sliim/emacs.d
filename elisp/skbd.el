@@ -45,6 +45,7 @@
       (define-key prefix-map (kbd "h q") 'helm-quickrun)
       (define-key prefix-map (kbd "h s") 'helm-github-stars)
       (define-key prefix-map (kbd "h w") 'helm-swoop)
+      (define-key prefix-map (kbd "h r") 'helm-git-grep)
       (define-key prefix-map (kbd "p i") 'projext-show-current-project)
       (define-key prefix-map (kbd "p t") 'projext-regenerate-tags)
       (define-key prefix-map (kbd "p c t") 'projext-clean-project-tags)

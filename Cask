@@ -59,6 +59,7 @@
 (depends-on "helm-project-persist")
 (depends-on "helm-swoop")
 (depends-on "helm-ls-git")
+(depends-on "helm-git-grep")
 (depends-on "helm-github-stars")
 (depends-on "auto-complete")
 (depends-on "iedit")
