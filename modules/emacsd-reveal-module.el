@@ -39,6 +39,11 @@
     (require 'ox-reveal)
     (setq org-reveal-root (concat "file://" reveal-root-dir))))
 
+(setq org-reveal-title-slide-template
+  "<h1>%t</h1>
+<div><span>%a</span>&nbsp;<span>&lt;%e&gt;</span></div>
+<div>%d</div>")
+
 (provide 'emacsd-reveal-module)
 
 ;;; emacsd-reveal-module.el ends here
