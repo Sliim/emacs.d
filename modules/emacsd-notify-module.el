@@ -1,14 +1,14 @@
-;;; modules.el --- Emacs.d.
+;;; emacsd-notify-module.el --- Emacs.d modules.
 ;;
 ;; Author: Sliim <sliim@mailoo.org>
 ;; Version: 1.0.0
-;; Keywords: emacs.d
+;; Keywords: emacs.d modules
 
 ;; This file is not part of GNU Emacs.
 
 ;;; Commentary:
 
-;; Emacs.d modules to use
+;; Personal Emacs.d notifications module
 
 ;;; License:
 
@@ -29,23 +29,19 @@
 
 ;;; Code:
 
-(require 'emacsd-prelude-module)
-(require 'emacsd-prog-module)
-(require 'emacsd-pyenv-module)
-(require 'emacsd-python-module)
-(require 'emacsd-php-module)
-(require 'emacsd-ac-module)
-(require 'emacsd-direx-module)
-(require 'emacsd-emms-module)
-(require 'emacsd-eshell-module)
-(require 'emacsd-git-messenger-module)
-(require 'emacsd-javascript-module)
-(require 'emacsd-markdown-module)
-(require 'emacsd-popwin-module)
-(require 'emacsd-powerline-module)
-(require 'emacsd-skbd-module)
-(require 'emacsd-reveal-module)
-(require 'emacsd-helm-module)
-(require 'emacsd-notify-module)
+(require 'notifications)
 
-;;; modules.el ends here
+(defvar emacsd-notify-icon-theme-path (expand-file-name ".icons/ACYL_Icon_Theme_0.9.4/" (getenv "HOME"))
+  "Icons theme path.")
+(defvar emacsd-notify-icon "scalable/apps/emacs.svg"
+  "Application icon path. Relative to icon theme path.")
+
+(setq notifications-application-icon (expand-file-name emacsd-notify-icon emacsd-notify-icon-theme-path)
+      notifications-on-action-map t
+      notifications-on-action-object t
+      notifications-on-close-map t
+      notifications-on-close-object t)
+
+(provide 'emacsd-notify-module)
+
+;;; emacsd-notify-module.el ends here
