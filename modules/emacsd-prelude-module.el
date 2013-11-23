@@ -59,7 +59,7 @@
     (when (file-exists-p emacsd-prelude-modules-file)
       (load emacsd-prelude-modules-file))))
 
-(setq prelude-flyspell t)
+(setq prelude-flyspell nil)
 (setq prelude-guru t)
 (setq prelude-whitespace nil)
 
