@@ -31,6 +31,7 @@
 
 (require 'emacsd-popwin-module)
 (require 'direx)
+(require 'direx-project)
 
 (push '(direx:direx-mode :position left :width 25 :dedicated t) popwin:special-display-config)
 
