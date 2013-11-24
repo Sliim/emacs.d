@@ -89,13 +89,14 @@ Start emacs!
 | ~C-o w~    | ~whitespace-mode~                      |
 
 **** helm
-| Keybinding | Command             |
-| ~C-o h f~  | ~helm-find-files~   |
-| ~C-o h g~  | ~helm-ls-git-ls~    |
-| ~C-o h p~  | ~helm-projectile~   |
-| ~C-o h q~  | ~helm-quickrun~     |
-| ~C-o h s~  | ~helm-github-stars~ |
-| ~C-o h w~  | ~helm-swoop~        |
+| Keybinding | Command               |
+| ~C-o h f~  | ~helm-find-files~     |
+| ~C-o h g~  | ~helm-ls-git-ls~      |
+| ~C-o h p~  | ~helm-projectile~     |
+| ~C-o h q~  | ~helm-quickrun~       |
+| ~C-o h s~  | ~helm-github-stars~   |
+| ~C-o h w~  | ~helm-swoop~          |
+| ~C-o h y~  | ~helm-c-yas-complete~ |
 
 **** projext / project-persist
 | Keybinding  | Command                                           |

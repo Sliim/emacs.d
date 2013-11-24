@@ -38,6 +38,7 @@
 (require 'helm-projectile)
 (require 'helm-swoop)
 (require 'helm-git-grep)
+(require 'helm-c-yasnippet)
 
 (setq helm-buffers-favorite-modes (quote (emacs-lisp-mode org-mode php-mode ruby-mode python-mode shell-script-mode))
       helm-follow-mode-persistent t)
