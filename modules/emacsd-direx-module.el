@@ -33,7 +33,7 @@
 (require 'direx)
 (require 'direx-project)
 
-(push '(direx:direx-mode :position left :width 25 :dedicated t) popwin:special-display-config)
+(push '(direx:direx-mode :position left :width 45 :dedicated t) popwin:special-display-config)
 
 (provide 'emacsd-direx-module)
 
