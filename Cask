@@ -62,6 +62,7 @@
 (depends-on "helm-git-grep")
 (depends-on "helm-github-stars")
 (depends-on "helm-c-yasnippet")
+(depends-on "helm-pydoc")
 (depends-on "auto-complete")
 (depends-on "iedit")
 (depends-on "markdown-mode")
