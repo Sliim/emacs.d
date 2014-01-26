@@ -39,6 +39,7 @@
             (concat bin-path ":" shims-path ":"
                     (getenv "PATH")))
     (setq python-check-command (concat shims-path "/flake8"))
+    (setq python-shell-interpreter (concat shims-path "/python"))
     (setq elpy-rpc-python-command (concat shims-path "/python"))))
 
 ;;TODO: Implement some stuff
