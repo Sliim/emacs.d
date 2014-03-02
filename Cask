@@ -99,5 +99,6 @@
 (depends-on "direx")
 (depends-on "quickrun")
 (depends-on "git-messenger")
+(depends-on "gnomenm")
 
 ;;; Cask ends here
