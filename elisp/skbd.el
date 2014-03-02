@@ -39,6 +39,7 @@
 (defvar skbd-mode-map
   (let ((map (make-sparse-keymap)))
     (let ((prefix-map (make-sparse-keymap)))
+      (define-key prefix-map (kbd "h c") 'helm-stumpwm-commands)
       (define-key prefix-map (kbd "h g") 'helm-ls-git-ls)
       (define-key prefix-map (kbd "h p") 'helm-pydoc)
       (define-key prefix-map (kbd "h f") 'helm-find-files)
