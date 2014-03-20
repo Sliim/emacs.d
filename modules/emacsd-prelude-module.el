@@ -34,13 +34,13 @@
 
 (require 'emacsd-skbd-module)
 
-(defvar emacsd-prelude-dir (expand-file-name "prelude" emacsd-dir)
+(defvar prelude-dir (expand-file-name "prelude" emacsd-dir)
   "Prelude root directory.")
 (defvar emacsd-prelude-modules-file (expand-file-name "prelude-modules.el" emacsd-dir)
   "Prelude modules file.")
-(defvar emacsd-prelude-core-dir (expand-file-name "core" emacsd-prelude-dir)
+(defvar emacsd-prelude-core-dir (expand-file-name "core" prelude-dir)
   "Prelude core root directory.")
-(defvar emacsd-prelude-modules-dir (expand-file-name "modules" emacsd-prelude-dir)
+(defvar emacsd-prelude-modules-dir (expand-file-name "modules" prelude-dir)
   "Prelude modules root directory.")
 
 (defun emacsd-require-package (package)
@@ -53,6 +53,7 @@
 
 (defun emacsd-load-prelude ()
   (when (file-exists-p emacsd-prelude-core-dir)
+    (load (expand-file-name "prelude-packages.el" emacsd-prelude-core-dir))
     (load (expand-file-name "prelude-core.el" emacsd-prelude-core-dir)))
   (when (file-exists-p emacsd-prelude-modules-dir)
     (add-to-list 'load-path emacsd-prelude-modules-dir)
@@ -63,7 +64,7 @@
 (setq prelude-guru t)
 (setq prelude-whitespace nil)
 
-(if (file-exists-p emacsd-prelude-dir)
+(if (file-exists-p prelude-dir)
     (emacsd-load-prelude)
   (message "Couldn't find prelude directory"))
 
