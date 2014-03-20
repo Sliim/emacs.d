@@ -142,7 +142,11 @@ This function run external shell command `python -m json.tool` on current region
       (define-key input-decode-map "\e[1;5A" [C-up])
       (define-key input-decode-map "\e[1;5B" [C-down])
       (define-key input-decode-map "\e[1;5C" [C-right])
-      (define-key input-decode-map "\e[1;5D" [C-left])))
+      (define-key input-decode-map "\e[1;5D" [C-left])
+      (define-key input-decode-map "\e[1;3A" [M-up])
+      (define-key input-decode-map "\e[1;3B" [M-down])
+      (define-key input-decode-map "\e[1;3C" [M-right])
+      (define-key input-decode-map "\e[1;3D" [M-left])))
 
 (provide 'emacsd-core)
 
