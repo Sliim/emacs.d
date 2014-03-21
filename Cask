@@ -92,6 +92,7 @@
 (depends-on "anzu")
 (depends-on "ox-reveal")
 (depends-on "moe-theme")
+(depends-on "emamux")
 
 (depends-on "powerline")
 (depends-on "emms")
