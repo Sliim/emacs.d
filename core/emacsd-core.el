@@ -44,10 +44,12 @@ This function run external shell command `python -m json.tool` on current region
     (indent-region begin end)))
 
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(setq package-user-dir emacsd-elpa-dir)
-(package-initialize)
+(defun emacsd-init-packages()
+  "Initialize packages directory."
+  (add-to-list 'package-archives
+               '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (setq package-user-dir emacsd-elpa-dir)
+  (package-initialize))
 
 (require 'guru-mode)
 (add-hook 'prog-mode-hook 'turn-on-guru-mode)

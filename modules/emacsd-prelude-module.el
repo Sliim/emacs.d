@@ -43,18 +43,20 @@
 (defvar emacsd-prelude-modules-dir (expand-file-name "modules" prelude-dir)
   "Prelude modules root directory.")
 
-(defun emacsd-require-package (package)
-  "Install PACKAGE unless already installed."
-  (unless (package-installed-p package)
-    (error (concat "Package " package " needed for prelude module."))))
-
-(defun prelude-ensure-module-deps (packages)
-  (mapc #'emacsd-require-package packages))
-
 (defun emacsd-load-prelude ()
   (when (file-exists-p emacsd-prelude-core-dir)
+    (defvar prelude-packages '()
+      "Overwrite prelude-packages variable. I use Cask for my dependencies.")
     (load (expand-file-name "prelude-packages.el" emacsd-prelude-core-dir))
-    (load (expand-file-name "prelude-core.el" emacsd-prelude-core-dir)))
+    (load (expand-file-name "prelude-core.el" emacsd-prelude-core-dir))
+
+    (emacsd-init-packages)
+    (defun prelude-require-package (package)
+      "Install PACKAGE unless already installed."
+      (unless (package-installed-p package)
+        (error (concat "Package " package " needed for prelude module."))))
+    (defun prelude-require-packages (packages)
+      (mapc #'prelude-require-package packages)))
   (when (file-exists-p emacsd-prelude-modules-dir)
     (add-to-list 'load-path emacsd-prelude-modules-dir)
     (when (file-exists-p emacsd-prelude-modules-file)
