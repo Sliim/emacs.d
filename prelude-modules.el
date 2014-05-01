@@ -32,6 +32,5 @@
 (require 'prelude-lisp)
 (require 'prelude-common-lisp)
 (require 'prelude-emacs-lisp)
-(require 'prelude-ruby)
 
 ;;; prelude-modules.el ends here
