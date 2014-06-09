@@ -29,6 +29,8 @@
 
 ;;; Code:
 
+(require 'multiple-cursors)
+
 (defun emacsd-json-pretty-format ()
   "Print json string into an human readable format.
 This function run external shell command `python -m json.tool` on current region."
