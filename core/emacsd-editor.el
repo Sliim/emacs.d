@@ -196,8 +196,6 @@ The body of the advice is in BODY."
 (diminish 'anzu-mode)
 (global-anzu-mode)
 
-(require 'helm-misc)
-
 ;; shorter aliases for ack-and-a-half commands
 (defalias 'ack 'ack-and-a-half)
 (defalias 'ack-same 'ack-and-a-half-same)

@@ -31,6 +31,7 @@
 
 (require 'helm)
 (require 'helm-aliases)
+(require 'helm-misc)
 (require 'helm-files)
 (require 'helm-ls-git)
 (require 'helm-etags+)
@@ -42,8 +43,8 @@
 (require 'helm-pydoc)
 
 (setq helm-buffers-favorite-modes (quote (emacs-lisp-mode org-mode php-mode ruby-mode python-mode shell-script-mode))
-      helm-follow-mode-persistent t)
-(setq helm-etags+-use-short-file-name 'absolute)
+      helm-follow-mode-persistent t
+      helm-etags+-use-short-file-name 'absolute)
 
 (require 'helm-github-stars)
 (setq helm-github-stars-username "Sliim")
