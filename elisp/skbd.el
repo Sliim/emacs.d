@@ -88,7 +88,7 @@
       (define-key prefix-map (kbd "w") 'whitespace-mode)
       (define-key prefix-map (kbd "i") 'iedit-mode)
       (define-key prefix-map (kbd "b") 'emacsd-helm-buffers-right-side)
-      (define-key prefix-map (kbd "k") 'set-cmd-to-kbd)
+      (define-key prefix-map (kbd "k") 'emacsd-set-cmd-to-kbd)
       (define-key prefix-map (kbd "d") 'direx:jump-to-directory-other-window)
       (define-key prefix-map (kbd "P") 'proced)
       (define-key prefix-map (kbd "s") 'eshell)
