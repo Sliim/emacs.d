@@ -37,7 +37,6 @@
 (require 'emacsd-php-module)
 (require 'emacsd-ac-module)
 (require 'emacsd-direx-module)
-(require 'emacsd-emms-module)
 (require 'emacsd-eshell-module)
 (require 'emacsd-git-messenger-module)
 (require 'emacsd-javascript-module)

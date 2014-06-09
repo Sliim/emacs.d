@@ -95,7 +95,6 @@
 (depends-on "emamux")
 
 (depends-on "powerline")
-(depends-on "emms")
 (depends-on "popwin")
 (depends-on "direx")
 (depends-on "quickrun")

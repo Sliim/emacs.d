@@ -114,16 +114,6 @@ Start emacs!
 | ~C-o p t~   | ~projext-regenerate-tags~                         |
 | ~C-o p x~   | ~project-persist-delete~                          |
 
-**** emms
-| Keybinding | Command                             |
-| ~C-o e a~  | ~emms-add-directory-tree~           |
-| ~C-o e b~  | ~emms-previous~                     |
-| ~C-o e d~  | ~emms-play-playlist-directory-tree~ |
-| ~C-o e h~  | ~helm-emms~                         |
-| ~C-o e l~  | ~emms-smart-browse~                 |
-| ~C-o e n~  | ~emms-next~                         |
-| ~C-o e p~  | ~emms-pause~                        |
-
 **** flymakes
 | Keybinding | Command                   |
 | ~C-o f n~  | ~flymake-goto-next-error~ |
