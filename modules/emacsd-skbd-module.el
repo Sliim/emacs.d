@@ -52,8 +52,6 @@
 (define-key skbd-mode-map (kbd "C--") 'text-scale-decrease)
 (define-key skbd-mode-map (kbd "C-x g") 'magit-status)
 (define-key skbd-mode-map (kbd "C-c h") 'helm-custom)
-(define-key skbd-mode-map (kbd "C-c s") 'helm-swoop)
-(define-key skbd-mode-map (kbd "C-c g") 'helm-git-grep)
 
 (provide 'emacsd-skbd-module)
 

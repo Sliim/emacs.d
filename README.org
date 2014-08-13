@@ -13,26 +13,35 @@ Prelude fonctionnalities may be added by cloning git submodules.
 
 ** Installation
 
-*Cask* is required to install packages dependencies.
-See install instructions [[http://cask.github.io/installation/][here]].
 Clone this repository in your home directory:
 #+BEGIN_SRC shell
 git clone https://github.com/Sliim/emacs.d ~/.emacs.d
 #+END_SRC
 
-To install prelude's features (core functions and prelude's modules will me available):
+*** With Cask
+You can use *Cask* to install package dependencies (installation instructions [[http://cask.github.io/installation/][here]])
+
+#+BEGIN_SRC shell
+cd ~/.emacs.d
+cask install
+#+END_SRC
+
+*** Without Cask
+Or, if you don't want to use Cask, I have a repository that contains all dependencies:
+#+BEGIN_SRC shell
+git clone https://github.com/Sliim/emacs.d-cask ~/.emacs.d/.cask
+#+END_SRC
+
+*** Git Submodules
+
+Submodules includes:
+  - [[https://github.com/bbatsov/prelude][Prelude]] (core functions and prelude's modules will be available)
+  - [[https://github.com/hakimel/reveal.js][Reveal.js]]
+
 Clone submodule:
 #+BEGIN_SRC shell
 git submodule init
 git submodule update
-#+END_SRC
-
-And enable ~emacsd-prelude-module.el~ in ~/modules.el~
-
-Install elpa package dependencies
-#+BEGIN_SRC shell
-cd ~/.emacs.d
-cask install
 #+END_SRC
 
 Start emacs!
@@ -83,7 +92,7 @@ Start emacs!
 | ~C-o b~    | ~emacsd-helm-buffers-right-side~       |
 | ~C-o d~    | ~direx:jump-to-directory-other-window~ |
 | ~C-o i~    | ~iedit-mode~                           |
-| ~C-o k~    | ~set-cmd-to-kbd~                       |
+| ~C-o k~    | ~emacsd-set-cmd-to-kbd~                |
 | ~C-o s~    | ~eshell~                               |
 | ~C-o t~    | ~proced~                               |
 | ~C-o w~    | ~whitespace-mode~                      |
@@ -95,6 +104,7 @@ Start emacs!
 | ~C-o h g~  | ~helm-ls-git-ls~        |
 | ~C-o h p~  | ~helm-pydoc~            |
 | ~C-o h q~  | ~helm-quickrun~         |
+| ~C-o h r~  | ~helm-git-grep~         |
 | ~C-o h s~  | ~helm-github-stars~     |
 | ~C-o h w~  | ~helm-swoop~            |
 | ~C-o h y~  | ~helm-c-yas-complete~   |
@@ -131,6 +141,28 @@ Start emacs!
 | Keybinding | Command        |
 | ~C-o g s~  | ~magit-status~ |
 | ~C-o g l~  | ~magit-log~    |
+
+**** emamux
+| Keybinding | Command                       |
+| ~C-o t s~  | ~emamux:send-command~         |
+| ~C-o t r~  | ~emamux:run-command~          |
+| ~C-o t l~  | ~emamux:run-last-command~     |
+| ~C-o t z~  | ~emamux:zoom-runner~          |
+| ~C-o t i~  | ~emamux:inspect-runner~       |
+| ~C-o t k~  | ~emamux:interrupt-runner~     |
+| ~C-o t K~  | ~emamux:close-runner-pane~    |
+| ~C-o t c~  | ~emamux:clear-runner-history~ |
+
+**** multiple-cursors
+| Keybinding | Command                       |
+| ~C-o m b~  | ~mc/edit-beginnings-of-lines~ |
+| ~C-o m e~  | ~mc/edit-ends-of-lines~       |
+| ~C-o m E~  | ~mc/edit-lines~               |
+| ~C-o m >~  | ~mc/mark-next-like-this~      |
+| ~C-o m <~  | ~mc/mark-previous-like-this~  |
+| ~C-o m a~  | ~mc/mark-all-like-this~       |
+| ~C-o m n~  | ~mc/mark-next-lines~          |
+| ~C-o m p~  | ~mc/mark-previous-lines~      |
 
 *** Skbd module
 | Keybinding  | Command               |
