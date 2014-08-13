@@ -34,7 +34,6 @@
 (require 'elpy)
 
 (elpy-enable)
-(elpy-clean-modeline)
 (setq elpy-rpc-backend "rope")
 
 (add-hook 'python-mode-hook (lambda ()

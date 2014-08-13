@@ -38,7 +38,7 @@
   (package-initialize))
 
 (require 'guru-mode)
-(add-hook 'prog-mode-hook 'turn-on-guru-mode)
+(add-hook 'prog-mode-hook 'guru-mode)
 
 ;;Global configuration
 (tool-bar-mode -1)

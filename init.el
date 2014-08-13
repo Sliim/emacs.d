@@ -89,6 +89,7 @@
     (load-file user-config-file)))
 
 ;; Load theme
-(load-theme 'moe-dark t)
+(require 'moe-theme)
+(moe-dark)
 
 ;;; init.el ends here
