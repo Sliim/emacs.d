@@ -31,10 +31,9 @@
 
 ;;; Code:
 
-(setq x-select-enable-clipboard nil)
-
 (unless window-system
   (when (getenv "DISPLAY")
+    (setq x-select-enable-clipboard nil)
     (defun xsel-cut-function (text &optional push)
       (with-temp-buffer
         (insert text)
