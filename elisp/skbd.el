@@ -85,6 +85,7 @@
       (define-key prefix-map (kbd "m a") 'mc/mark-all-like-this)
       (define-key prefix-map (kbd "m n") 'mc/mark-next-lines)
       (define-key prefix-map (kbd "m p") 'mc/mark-previous-lines)
+      (define-key prefix-map (kbd "r i") 'yari-helm)
       (define-key prefix-map (kbd "a") 'auto-complete)
       (define-key prefix-map (kbd "w") 'whitespace-mode)
       (define-key prefix-map (kbd "i") 'iedit-mode)

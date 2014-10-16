@@ -164,6 +164,11 @@ Start emacs!
 | ~C-o m n~  | ~mc/mark-next-lines~          |
 | ~C-o m p~  | ~mc/mark-previous-lines~      |
 
+**** ruby
+| Keybinding | Command     |
+| ~C-o r i~  | ~yari-helm~ |
+
+
 *** Skbd module
 | Keybinding  | Command               |
 | ~M-x~       | ~helm-M-x~            |

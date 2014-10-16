@@ -94,6 +94,7 @@
 (depends-on "ox-reveal")
 (depends-on "moe-theme")
 (depends-on "emamux")
+(depends-on "yari")
 
 (depends-on "powerline")
 (depends-on "popwin")
