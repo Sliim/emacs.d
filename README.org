@@ -94,7 +94,7 @@ Start emacs!
 | ~C-o i~    | ~iedit-mode~                           |
 | ~C-o k~    | ~emacsd-set-cmd-to-kbd~                |
 | ~C-o s~    | ~eshell~                               |
-| ~C-o t~    | ~proced~                               |
+| ~C-o P~    | ~proced~                               |
 | ~C-o w~    | ~whitespace-mode~                      |
 
 **** helm
