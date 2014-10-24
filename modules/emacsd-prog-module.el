@@ -30,6 +30,7 @@
 ;;; Code:
 
 (require 'multiple-cursors)
+(require 'restclient)
 
 (defun emacsd-json-pretty-format ()
   "Print json string into an human readable format.

@@ -95,12 +95,12 @@
 (depends-on "moe-theme")
 (depends-on "emamux")
 (depends-on "yari")
+(depends-on "restclient")
 
 (depends-on "powerline")
 (depends-on "popwin")
 (depends-on "direx")
 (depends-on "quickrun")
 (depends-on "git-messenger")
-(depends-on "gnomenm")
 
 ;;; Cask ends here
