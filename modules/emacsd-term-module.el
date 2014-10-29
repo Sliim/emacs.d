@@ -31,6 +31,14 @@
 
 ;;; Code:
 
+(defun emacsd-term-setup ()
+  "Disable background color and run eshell."
+  (interactive)
+  (custom-theme-set-faces
+   'moe-dark
+   `(default ((t ( :foreground "#F6F3E8" :height 85 :width normal)))))
+  (eshell))
+
 (unless window-system
   (when (getenv "DISPLAY")
     (setq x-select-enable-clipboard nil)
