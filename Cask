@@ -1,4 +1,4 @@
-;;; custom.el --- Emacs.d dependencies
+;;; Cask --- Emacs.d dependencies
 ;;
 ;; Author: Sliim <sliim@mailoo.org>
 ;; Version: 1.0.0
@@ -35,7 +35,6 @@
 (source gnu)
 (source melpa)
 
-(depends-on "cask")
 (depends-on "s")
 (depends-on "dash")
 (depends-on "diminish")
@@ -51,7 +50,19 @@
 (depends-on "php-mode")
 (depends-on "flymake-php")
 
+(depends-on "markdown-mode")
+(depends-on "puppet-mode")
+(depends-on "yaml-mode")
+(depends-on "haskell-mode")
+(depends-on "go-mode")
+(depends-on "feature-mode")
+
 (depends-on "magit")
+(depends-on "git-commit-mode")
+(depends-on "gitignore-mode")
+(depends-on "gitconfig-mode")
+(depends-on "git-messenger")
+
 (depends-on "helm")
 (depends-on "projectile")
 (depends-on "project-persist")
@@ -66,25 +77,16 @@
 (depends-on "auto-complete")
 (depends-on "iedit")
 (depends-on "multiple-cursors")
-(depends-on "markdown-mode")
-(depends-on "puppet-mode")
 (depends-on "ack-and-a-half")
 (depends-on "elisp-slime-nav")
 (depends-on "expand-region")
 (depends-on "flycheck")
 (depends-on "flymake-cursor")
-(depends-on "git-commit-mode")
-(depends-on "gitignore-mode")
-(depends-on "gitconfig-mode")
 (depends-on "guru-mode")
 (depends-on "rainbow-mode")
 (depends-on "rainbow-delimiters")
 (depends-on "smartparens")
 (depends-on "undo-tree")
-(depends-on "yaml-mode")
-(depends-on "haskell-mode")
-(depends-on "go-mode")
-(depends-on "feature-mode")
 (depends-on "volatile-highlights")
 (depends-on "ido-ubiquitous")
 (depends-on "flx-ido")
@@ -96,11 +98,9 @@
 (depends-on "emamux")
 (depends-on "yari")
 (depends-on "restclient")
-
 (depends-on "powerline")
 (depends-on "popwin")
 (depends-on "direx")
 (depends-on "quickrun")
-(depends-on "git-messenger")
 
 ;;; Cask ends here

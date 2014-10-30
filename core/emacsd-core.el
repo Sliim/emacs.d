@@ -115,10 +115,6 @@
 ;; config changes made through the customize UI will be store here
 (setq custom-file (expand-file-name "custom.el" emacsd-dir))
 
-(require 'cask)
-(setq cask-file (expand-file-name "Cask" emacsd-dir))
-(cask-initialize)
-
 ;;Small fix for selection with shift+up
 ; More infos: http://lists.gnu.org/archive/html/help-gnu-emacs/2011-05/msg00174.html
 (if (tty-type)
