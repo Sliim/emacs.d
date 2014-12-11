@@ -19,7 +19,7 @@ git clone https://github.com/Sliim/emacs.d ~/.emacs.d
 #+END_SRC
 
 *** With Cask
-You can use *Cask* to install package dependencies (installation instructions [[http://cask.github.io/installation/][here]])
+You can use *Cask* to install package dependencies (installation instructions [[http://cask.readthedocs.org/en/latest/guide/installation.html][here]])
 
 #+BEGIN_SRC shell
 cd ~/.emacs.d
