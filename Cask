@@ -91,7 +91,6 @@
 (depends-on "ido-ubiquitous")
 (depends-on "flx-ido")
 (depends-on "smex")
-(depends-on "ielm")
 (depends-on "anzu")
 (depends-on "ox-reveal")
 (depends-on "moe-theme")
