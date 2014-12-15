@@ -79,8 +79,4 @@
   (when (file-exists-p user-config-file)
     (load-file user-config-file)))
 
-;; Load theme
-(require 'moe-theme)
-(moe-dark)
-
 ;;; init.el ends here
