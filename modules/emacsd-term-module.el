@@ -31,14 +31,6 @@
 
 ;;; Code:
 
-(defun emacsd-term-setup ()
-  "Disable background color and run eshell."
-  (interactive)
-  (custom-theme-set-faces
-   'moe-dark
-   `(default ((t ( :foreground "#F6F3E8" :height 85 :width normal)))))
-  (eshell))
-
 (unless window-system
   (when (getenv "DISPLAY")
     (setq x-select-enable-clipboard nil)
@@ -51,7 +43,12 @@
         (unless (string= (car kill-ring) xsel-output)
           xsel-output )))
     (setq interprogram-cut-function 'xsel-cut-function)
-    (setq interprogram-paste-function 'xsel-paste-function)))
+    (setq interprogram-paste-function 'xsel-paste-function))
+
+  (custom-theme-set-faces
+   'moe-dark
+   `(default ((t ( :foreground "#F6F3E8" :height 85 :width normal)))))
+  (eshell))
 
 (provide 'emacsd-term-module)
 ;;; emacsd-term-module.el ends here
