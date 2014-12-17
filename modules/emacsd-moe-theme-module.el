@@ -32,6 +32,11 @@
 (require 'moe-theme)
 (moe-dark)
 (moe-theme-set-color 'blue)
+
+(custom-theme-set-faces
+ 'moe-dark
+ `(default ((t ( :foreground "#F6F3E8" :height 85 :width normal)))))
+
 (provide 'emacsd-moe-theme-module)
 
 ;;; emacsd-moe-theme-module.el ends here

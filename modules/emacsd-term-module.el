@@ -43,12 +43,7 @@
         (unless (string= (car kill-ring) xsel-output)
           xsel-output )))
     (setq interprogram-cut-function 'xsel-cut-function)
-    (setq interprogram-paste-function 'xsel-paste-function))
-
-  (custom-theme-set-faces
-   'moe-dark
-   `(default ((t ( :foreground "#F6F3E8" :height 85 :width normal)))))
-  (eshell))
+    (setq interprogram-paste-function 'xsel-paste-function)))
 
 (provide 'emacsd-term-module)
 ;;; emacsd-term-module.el ends here
