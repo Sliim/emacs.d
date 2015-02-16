@@ -77,7 +77,6 @@
 (depends-on "auto-complete")
 (depends-on "iedit")
 (depends-on "multiple-cursors")
-(depends-on "ack-and-a-half")
 (depends-on "elisp-slime-nav")
 (depends-on "expand-region")
 (depends-on "flycheck")
