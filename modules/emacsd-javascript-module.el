@@ -43,4 +43,8 @@
 
 (provide 'emacsd-javascript-module)
 
+;; Conkeror minor mode
+(autoload 'conkeror-minor-mode "conkeror-minor-mode")
+(add-to-list 'auto-mode-alist '("\\.conkerorrc\\'" . conkeror-minor-mode))
+
 ;;; emacsd-javascript-module.el ends here

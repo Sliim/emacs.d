@@ -56,6 +56,7 @@
 (depends-on "haskell-mode")
 (depends-on "go-mode")
 (depends-on "feature-mode")
+(depends-on "conkeror-minor-mode")
 
 (depends-on "magit")
 (depends-on "git-commit-mode")
