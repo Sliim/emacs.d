@@ -73,7 +73,7 @@
   (add-hook 'project-persist-after-load-hook 'projext-hook-load-config)
   (add-hook 'project-persist-after-load-hook 'projext-hook-dired-project-root)
   (add-hook 'project-persist-after-load-hook (lambda ()
-                                               (remove-hook 'kill-emacs-hook 'pp/offer-save-if-open-project)))
+                                               (remove-hook 'kill-emacs-hook 'project-persist--offer-save-if-open-project)))
 
   ;; Closing project
   (add-hook 'project-persist-before-close-hook 'projext-hook-clear-current-project-desktop)
@@ -92,12 +92,12 @@
 (defun projext-find ()
   "Find and load the given project name."
   (interactive)
-  (pp/project-open (pp/read-project-name)))
+  (project-persist--project-open (project-persist--read-project-name)))
 
 (defun projext-show-current-project ()
   "Show the current project."
   (interactive)
-  (if (pp/has-open-project)
+  (if (project-persist--has-open-project)
       (message project-persist-current-project-name)
     (message "none")))
 
@@ -106,13 +106,13 @@
   (interactive)
   (projext-setup-desktop-var)
   (desktop-clear)
-  (when (pp/has-open-project)
+  (when (project-persist--has-open-project)
     (dired project-persist-current-project-root-dir)))
 
 (defun projext-save-project-desktop ()
   "Function that save current desktop in project's directory."
   (interactive)
-  (if (pp/has-open-project)
+  (if (project-persist--has-open-project)
       (progn
         (let ((p-dir (projext-get-project-directory)))
           (when (file-exists-p p-dir)
@@ -127,7 +127,7 @@
   (projext-clean-project-tags)
   (projext-set-projectile-tags-command)
   (let ((p-tags (concat (projext-get-project-directory) projext-tags-file)))
-    (if (pp/has-open-project)
+    (if (project-persist--has-open-project)
         (progn
           (shell-command (format projectile-tags-command project-persist-current-project-root-dir))
           (visit-tags-table p-tags))
@@ -136,7 +136,7 @@
 (defun projext-clean-project-desktop ()
   "Clear desktop and remove desktop files."
   (interactive)
-  (when (pp/has-open-project)
+  (when (project-persist--has-open-project)
     (let ((p-desk (concat (projext-get-project-directory) projext-desktop-file)))
       (projext-clear-project-desktop)
       (when (file-exists-p p-desk)
@@ -147,7 +147,7 @@
   "Clear tags table and remove tags file."
   (interactive)
   (tags-reset-tags-tables)
-  (when (pp/has-open-project)
+  (when (project-persist--has-open-project)
     (let ((p-tags (concat (projext-get-project-directory) projext-tags-file)))
       (when (file-exists-p p-tags)
         (delete-file p-tags))))
@@ -205,7 +205,7 @@
 
 (defun projext-hook-clear-current-project-desktop ()
   "Clear current project desktop."
-  (when (pp/has-open-project)
+  (when (project-persist--has-open-project)
     (message "Clearing project desktop..")
     (projext-clear-project-desktop)
     (projext-remove-project-desktop-lock-file)))
@@ -225,14 +225,14 @@
 
 (defun projext-remove-project-desktop-lock-file ()
   "Remove desktop lock file."
-  (when (pp/has-open-project)
+  (when (project-persist--has-open-project)
     (let ((p-desktop-lock (concat (projext-get-project-directory) projext-desktop-file ".lock")))
       (when (file-exists-p p-desktop-lock)
         (delete-file p-desktop-lock)))))
 
 (defun projext-close-if-opened ()
   "Close current project if opened."
-  (when (pp/has-open-project)
+  (when (project-persist--has-open-project)
     (project-persist-close)))
 
 (defun projext-set-projectile-tags-command ()
@@ -248,9 +248,9 @@
     --regex-PHP='/(public |final |static |abstract |protected |private )+function ([^ (]*)/\2/f/' \
     --regex-PHP='/const ([^ ]*)/\1/d/'")
 
-  (when (pp/has-open-project)
-    (when (pp/settings-get 'languages)
-      (setq p-base-command (concat p-base-command " --languages=" (pp/settings-get 'languages))))
+  (when (project-persist--has-open-project)
+    (when (project-persist--settings-get 'languages)
+      (setq p-base-command (concat p-base-command " --languages=" (project-persist--settings-get 'languages))))
     (setq p-base-command (concat p-base-command " -o " (projext-get-project-directory) projext-tags-file)))
 
   (setq projectile-tags-command (concat p-base-command " %s")))
