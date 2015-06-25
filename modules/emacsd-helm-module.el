@@ -47,8 +47,11 @@
       helm-etags+-use-short-file-name 'absolute)
 
 (require 'helm-github-stars)
-(setq helm-github-stars-username "Sliim")
-(setq helm-github-stars-cache-file (expand-file-name "hgs-cache" emacsd-var-dir))
+(setq helm-github-stars-username "Sliim"
+      helm-github-stars-cache-file (expand-file-name "hgs-cache" emacsd-var-dir)
+      helm-github-stars-refetch-time 0.5
+      helm-github-stars-name-length 30
+      helm-github-stars-full-frame t)
 
 (defun emacsd-helm-buffers-right-side ()
   "Special helm settings to list buffers in right side."
