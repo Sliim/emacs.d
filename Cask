@@ -59,7 +59,6 @@
 (depends-on "conkeror-minor-mode")
 
 (depends-on "magit")
-(depends-on "git-commit-mode")
 (depends-on "gitignore-mode")
 (depends-on "gitconfig-mode")
 (depends-on "git-messenger")
