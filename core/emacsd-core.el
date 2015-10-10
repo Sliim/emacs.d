@@ -60,11 +60,6 @@
       vc-follow-symlinks t
       inhibit-startup-screen t)
 
-;; Setup Project-persist, projectile and projext
-(require 'project-persist)
-(setq project-persist-settings-dir (expand-file-name "project-persist" emacsd-var-dir))
-(setq project-persist-auto-save-global nil)
-
 (require 'projectile)
 (require 'diminish)
 (setq projectile-cache-file (expand-file-name "projectile.cache" emacsd-var-dir))
@@ -73,9 +68,6 @@
 (diminish 'projectile-mode "Prjl")
 (add-to-list 'projectile-globally-ignored-directories ".project")
 (setq projectile-globally-ignored-files '())
-
-(require 'projext)
-(projext-init)
 
 ;; Mouse settings (disabling mouse-wheel and mouse keys)
 (setq make-pointer-invisible t

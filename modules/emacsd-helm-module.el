@@ -35,7 +35,6 @@
 (require 'helm-files)
 (require 'helm-ls-git)
 (require 'helm-etags+)
-(require 'helm-project-persist)
 (require 'helm-projectile)
 (require 'helm-swoop)
 (require 'helm-git-grep)

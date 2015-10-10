@@ -54,7 +54,6 @@ Start emacs!
 - ~elisp/~
   Contains my emacs-lisp code that I've not yet packaged:
     + ~skbd.el~ is a global minor mode to enable/disable my custom keybindings.
-    + ~projext.el~ provides cool stuff to interact inside project with ~projectile~ and ~project-persist~.
 
 - ~modules/~
   Is a set of personal modules. See modules.el to enable/disable modules.
@@ -109,20 +108,9 @@ Start emacs!
 | ~C-o h w~  | ~helm-swoop~            |
 | ~C-o h y~  | ~helm-c-yas-complete~   |
 
-**** projext / project-persist
+**** project
 | Keybinding  | Command                                           |
-| ~C-o p c a~ | ~projext-clean-project~                           |
-| ~C-o p c d~ | ~projext-clean-project-desktop~                   |
-| ~C-o p c t~ | ~projext-clean-project-tags~                      |
 | ~C-o p d~   | ~direx-project:jump-to-project-root-other-window~ |
-| ~C-o p f~   | ~projext-find~                                    |
-| ~C-o p h~   | ~helm-project-persist~                            |
-| ~C-o p i~   | ~projext-show-current-project~                    |
-| ~C-o p k~   | ~project-persist-close~                           |
-| ~C-o p n~   | ~project-persist-create~                          |
-| ~C-o p s~   | ~project-persist-save~                            |
-| ~C-o p t~   | ~projext-regenerate-tags~                         |
-| ~C-o p x~   | ~project-persist-delete~                          |
 
 **** flymakes
 | Keybinding | Command                   |
@@ -186,3 +174,4 @@ Start emacs!
 | Keybinding | Command                                    |
 | ~C-c d~    | ~prelude-duplicate-current-line-or-region~ |
 | ~C-c b~    | ~prelude-switch-to-previous-buffer~        |
+|            |                                            |

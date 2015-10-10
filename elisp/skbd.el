@@ -31,7 +31,12 @@
 
 (defgroup skbd nil
   "Sliim personal keybindings"
-  :group 'projext)
+  :group 'helm
+  :group 'direx
+  :group 'quickrun
+  :group 'flymake
+  :group 'emamux
+  :group 'magit)
 
 (defvar skbd-keymap-prefix (kbd "C-o")
   "Skbd keymap prefix.")
@@ -48,18 +53,7 @@
       (define-key prefix-map (kbd "h w") 'helm-swoop)
       (define-key prefix-map (kbd "h r") 'helm-git-grep)
       (define-key prefix-map (kbd "h y") 'helm-c-yas-complete)
-      (define-key prefix-map (kbd "p i") 'projext-show-current-project)
-      (define-key prefix-map (kbd "p t") 'projext-regenerate-tags)
-      (define-key prefix-map (kbd "p c t") 'projext-clean-project-tags)
-      (define-key prefix-map (kbd "p c d") 'projext-clean-project-desktop)
-      (define-key prefix-map (kbd "p c a") 'projext-clean-project)
-      (define-key prefix-map (kbd "p f") 'projext-find)
-      (define-key prefix-map (kbd "p s") 'project-persist-save)
-      (define-key prefix-map (kbd "p k") 'project-persist-close)
       (define-key prefix-map (kbd "p d") 'direx-project:jump-to-project-root-other-window)
-      (define-key prefix-map (kbd "p n") 'project-persist-create)
-      (define-key prefix-map (kbd "p h") 'helm-project-persist)
-      (define-key prefix-map (kbd "p x") 'project-persist-delete)
       (define-key prefix-map (kbd "f n") 'flymake-goto-next-error)
       (define-key prefix-map (kbd "f p") 'flymake-goto-prev-error)
       (define-key prefix-map (kbd "q q") 'quickrun)
