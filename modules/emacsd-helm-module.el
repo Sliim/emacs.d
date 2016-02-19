@@ -30,7 +30,6 @@
 ;;; Code:
 
 (require 'helm)
-(require 'helm-aliases)
 (require 'helm-misc)
 (require 'helm-files)
 (require 'helm-ls-git)
