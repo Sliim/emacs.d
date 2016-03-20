@@ -47,7 +47,7 @@
 (require 'emacsd-reveal-module)
 (require 'emacsd-helm-module)
 (require 'emacsd-notify-module)
-,,,
+
 ;;(require 'emacsd-moe-theme-module)
 (require 'emacsd-blue-theme-module)
 
