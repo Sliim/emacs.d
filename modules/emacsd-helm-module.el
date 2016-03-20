@@ -39,6 +39,7 @@
 (require 'helm-git-grep)
 (require 'helm-c-yasnippet)
 (require 'helm-pydoc)
+(require 'helm-command)
 
 (setq helm-buffers-favorite-modes (quote (emacs-lisp-mode org-mode php-mode ruby-mode python-mode shell-script-mode))
       helm-follow-mode-persistent t
