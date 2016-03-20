@@ -1,14 +1,14 @@
-;;; modules.el --- Emacs.d.
+;;; emacsd-disable-mouse-module.el --- Emacs.d modules.
 ;;
 ;; Author: Sliim <sliim@mailoo.org>
 ;; Version: 1.0.0
-;; Keywords: emacs.d
+;; Keywords: emacs.d modules
 
 ;; This file is not part of GNU Emacs.
 
 ;;; Commentary:
 
-;; Emacs.d modules to use
+;; Disable mouse settings (mouse-wheel and mouse keys)
 
 ;;; License:
 
@@ -29,28 +29,15 @@
 
 ;;; Code:
 
-(require 'emacsd-prelude-module)
-(require 'emacsd-prog-module)
-(require 'emacsd-pyenv-module)
-(require 'emacsd-python-module)
-(require 'emacsd-ruby-module)
-(require 'emacsd-php-module)
-(require 'emacsd-ac-module)
-(require 'emacsd-direx-module)
-(require 'emacsd-eshell-module)
-(require 'emacsd-git-messenger-module)
-(require 'emacsd-javascript-module)
-(require 'emacsd-markdown-module)
-(require 'emacsd-popwin-module)
-(require 'emacsd-powerline-module)
-(require 'emacsd-skbd-module)
-(require 'emacsd-reveal-module)
-(require 'emacsd-helm-module)
-(require 'emacsd-notify-module)
+(setq make-pointer-invisible t
+      mouse-wheel-mode -1)
+(dolist (k '([mouse-1] [down-mouse-1] [drag-mouse-1] [double-mouse-1] [triple-mouse-1]
+             [mouse-2] [down-mouse-2] [drag-mouse-2] [double-mouse-2] [triple-mouse-2]
+             [mouse-3] [down-mouse-3] [drag-mouse-3] [double-mouse-3] [triple-mouse-3]
+             [mouse-4] [down-mouse-4] [drag-mouse-4] [double-mouse-4] [triple-mouse-4]
+             [mouse-5] [down-mouse-5] [drag-mouse-5] [double-mouse-5] [triple-mouse-5]))
+  (global-unset-key k))
 
-(require 'emacsd-moe-theme-module)
-(require 'emacsd-term-module)
+(provide 'emacsd-disable-mouse-module)
 
-;; (require 'emacsd-disable-mouse-module)
-
-;;; modules.el ends here
+;;; emacsd-disable-mouse-module.el ends here
