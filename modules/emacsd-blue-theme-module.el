@@ -1,14 +1,14 @@
-;;; modules.el --- Emacs.d.
+;;; emacsd-blue-theme-module.el --- Emacs.d modules.
 ;;
 ;; Author: Sliim <sliim@mailoo.org>
 ;; Version: 1.0.0
-;; Keywords: emacs.d
+;; Keywords: emacs.d modules
 
 ;; This file is not part of GNU Emacs.
 
 ;;; Commentary:
 
-;; Emacs.d modules to use
+;; Personal Emacs.d Auto-complete module
 
 ;;; License:
 
@@ -29,29 +29,11 @@
 
 ;;; Code:
 
-(require 'emacsd-prelude-module)
-(require 'emacsd-prog-module)
-(require 'emacsd-pyenv-module)
-(require 'emacsd-python-module)
-(require 'emacsd-ruby-module)
-(require 'emacsd-php-module)
-(require 'emacsd-ac-module)
-(require 'emacsd-direx-module)
-(require 'emacsd-eshell-module)
-(require 'emacsd-git-messenger-module)
-(require 'emacsd-javascript-module)
-(require 'emacsd-markdown-module)
-(require 'emacsd-popwin-module)
-(require 'emacsd-powerline-module)
-(require 'emacsd-skbd-module)
-(require 'emacsd-reveal-module)
-(require 'emacsd-helm-module)
-(require 'emacsd-notify-module)
-,,,
-;;(require 'emacsd-moe-theme-module)
-(require 'emacsd-blue-theme-module)
+(load-theme 'S70wN-blue t)
+(custom-theme-set-faces
+ 'S70wN-blue
+ `(default ((t ( :foreground "#00D7FF" :height 85 :width normal)))))
 
-(require 'emacsd-term-module)
-;; (require 'emacsd-disable-mouse-module)
+(provide 'emacsd-blue-theme-module)
 
-;;; modules.el ends here
+;;; emacsd-blue-theme-module.el ends here
