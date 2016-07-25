@@ -41,9 +41,11 @@
 (add-hook 'prog-mode-hook 'guru-mode)
 
 ;;Global configuration
-(tool-bar-mode -1)
+(if (display-graphic-p)
+    (progn
+      (tool-bar-mode -1)
+      (scroll-bar-mode -1)))
 (menu-bar-mode -1)
-(scroll-bar-mode -1)
 ;; (blink-cursor-mode -1)
 (delete-selection-mode t)
 (global-auto-revert-mode t)
