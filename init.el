@@ -47,7 +47,10 @@
   "Themes root directory.")
 (defvar emacsd-cask-dir (expand-file-name ".cask" emacsd-dir)
   "Cask root directory.")
-(defvar emacsd-elpa-dir (expand-file-name (concat emacs-version "/elpa") emacsd-cask-dir)
+(defvar emacsd-elpa-dir (expand-file-name
+                         (concat (number-to-string emacs-major-version) "."
+                                 (number-to-string emacs-minor-version) "/elpa")
+                         emacsd-cask-dir)
   "Elpa packages root directory.")
 (defvar emacsd-backup-dir (expand-file-name "backup" emacsd-var-dir)
   "This folder stores all the backup files.")
