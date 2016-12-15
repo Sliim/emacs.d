@@ -6,7 +6,7 @@ My .emacs.d/ home directory.
 
 This repository contains my emacs24 configuration.
 
-It's largely inspired from [[https://githu.com/bbatsov/prelude/][Prelude]] that I have used few years!
+It's largely inspired from [[https://github.com/bbatsov/prelude/][Prelude]] that I have used few years!
 
 I have ported my old [[https://github.com/Sliim/prelude-personal][prelude-personal]] configuration into a from scratch repository, to have a fresh, faster emacs configuration.
 Prelude fonctionnalities may be added by cloning git submodules.
