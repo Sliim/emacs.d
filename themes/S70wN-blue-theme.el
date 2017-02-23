@@ -33,7 +33,7 @@
 ;;; Code:
 
 (deftheme S70wN-blue "The S70wN theme")
-(let ((*background-color* "#102235")
+(let ((*background-color* "#111111")
       (*yellow* "yellow")
       (*comments* "#4E6F91")
       (*constant* "#FFC287")
