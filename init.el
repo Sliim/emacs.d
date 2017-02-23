@@ -28,6 +28,9 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
+
+(package-initialize)
+
 (when (version< emacs-version "24.1")
   (error "Requires at least GNU Emacs 24.1"))
 
