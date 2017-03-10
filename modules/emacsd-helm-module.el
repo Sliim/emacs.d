@@ -48,7 +48,7 @@
 (require 'helm-github-stars)
 (setq helm-github-stars-username "Sliim"
       helm-github-stars-cache-file (expand-file-name "hgs-cache" emacsd-var-dir)
-      helm-github-stars-refetch-time 0.5
+      helm-github-stars-refetch-time nil
       helm-github-stars-name-length 30
       helm-github-stars-full-frame t)
 
