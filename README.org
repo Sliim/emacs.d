@@ -18,18 +18,10 @@ Clone this repository in your home directory:
 git clone https://github.com/Sliim/emacs.d ~/.emacs.d
 #+END_SRC
 
-*** With Cask
-You can use *Cask* to install package dependencies (installation instructions [[http://cask.readthedocs.org/en/latest/guide/installation.html][here]])
-
+Use *Cask* to install package dependencies (installation instructions [[http://cask.readthedocs.org/en/latest/guide/installation.html][here]]):
 #+BEGIN_SRC shell
 cd ~/.emacs.d
 cask install
-#+END_SRC
-
-*** Without Cask
-Or, if you don't want to use Cask, I have a repository that contains all dependencies:
-#+BEGIN_SRC shell
-git clone https://github.com/Sliim/emacs.d-cask ~/.emacs.d/.cask
 #+END_SRC
 
 *** Git Submodules
