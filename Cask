@@ -99,4 +99,8 @@
 (depends-on "direx")
 (depends-on "quickrun")
 
+(depends-on "docker")
+(depends-on "dockerfile-mode")
+(depends-on "docker-tramp")
+
 ;;; Cask ends here
