@@ -99,6 +99,7 @@ Start emacs!
 | ~C-o h s~  | ~helm-github-stars~     |
 | ~C-o h w~  | ~helm-swoop~            |
 | ~C-o h y~  | ~helm-c-yas-complete~   |
+| ~C-o h b~  | ~helm-bookmarks~        |
 
 **** project
 | Keybinding  | Command                                           |
