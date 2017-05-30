@@ -119,6 +119,7 @@
    ;; magit
    `(magit-diff-add ((t (:foreground, *string*))))
    `(magit-diff-del ((t (:foreground, *red*))))
+   `(magit-section-highlight ((t (:background, *current-line*))))
 
    ;; org-mode
    `(org-date ((t (:foreground, *light-purple* :underline t))))
