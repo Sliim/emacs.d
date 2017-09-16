@@ -85,7 +85,7 @@
 (depends-on "smartparens")
 (depends-on "undo-tree")
 (depends-on "volatile-highlights")
-(depends-on "ido-ubiquitous")
+(depends-on "ido-completing-read+")
 (depends-on "flx-ido")
 (depends-on "smex")
 (depends-on "anzu")

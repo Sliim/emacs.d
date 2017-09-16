@@ -146,7 +146,7 @@ The body of the advice is in BODY."
 
 ;; ido-mode
 (require 'ido)
-(require 'ido-ubiquitous)
+(require 'ido-completing-read+)
 (require 'flx-ido)
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
