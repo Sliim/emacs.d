@@ -34,6 +34,7 @@
 (require 'emacsd-pyenv-module)
 (require 'emacsd-python-module)
 (require 'emacsd-ruby-module)
+(require 'emacsd-robe-module)
 (require 'emacsd-php-module)
 (require 'emacsd-ac-module)
 (require 'emacsd-direx-module)

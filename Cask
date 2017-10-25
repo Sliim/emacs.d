@@ -99,6 +99,8 @@
 (depends-on "direx")
 (depends-on "quickrun")
 (depends-on "sx")
+(depends-on "robe")
+(depends-on "helm-robe")
 
 (depends-on "docker")
 (depends-on "dockerfile-mode")
