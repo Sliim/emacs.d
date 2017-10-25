@@ -90,6 +90,7 @@
       (define-key prefix-map (kbd "d") 'direx:jump-to-directory-other-window)
       (define-key prefix-map (kbd "P") 'proced)
       (define-key prefix-map (kbd "s") 'eshell)
+      (define-key prefix-map (kbd "S") 'sx-search)
 
       (define-key map skbd-keymap-prefix prefix-map))
     map)
