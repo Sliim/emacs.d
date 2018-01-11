@@ -51,6 +51,8 @@
 (require 'emacsd-mattermost-module)
 (require 'emacsd-docker-module)
 (require 'emacsd-magit-module)
+(require 'emacsd-converter-module)
+(require 'emacsd-hash-module)
 
 ;;(require 'emacsd-moe-theme-module)
 (require 'emacsd-blue-theme-module)
