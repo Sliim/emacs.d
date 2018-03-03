@@ -31,6 +31,7 @@
 
 (require 'multiple-cursors)
 (require 'restclient)
+(require 'flycheck)
 
 (defun emacsd-json-pretty-format ()
   "Print json string into an human readable format.
@@ -55,6 +56,8 @@ This function run external shell command `python -m json.tool` on current region
                               (when (and (require 'auto-complete-etags nil t) tags-table-list)
                                 (add-to-list 'ac-sources 'ac-source-etags))
                               (auto-complete-mode t))))
+
+(setq flycheck-emacs-lisp-load-path 'inherit)
 
 (provide 'emacsd-prog-module)
 
