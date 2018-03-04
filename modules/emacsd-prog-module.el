@@ -45,7 +45,7 @@ This function run external shell command `python -m json.tool` on current region
   (save-excursion
     (shell-command-on-region (region-beginning) (region-end) "xmllint --format -" (buffer-name) t)
     (nxml-mode)
-    (indent-region begin end)))
+    (indent-region (region-beginning) (region-end))))
 
 (add-hook 'prog-mode-hook (lambda ()
                             (add-hook 'before-save-hook 'delete-trailing-whitespace)
