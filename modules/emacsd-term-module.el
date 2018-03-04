@@ -45,5 +45,22 @@
     (setq interprogram-cut-function 'xsel-cut-function)
     (setq interprogram-paste-function 'xsel-paste-function)))
 
+;;Small fix for selection with shift+up
+; More infos: http://lists.gnu.org/archive/html/help-gnu-emacs/2011-05/msg00174.html
+(if (tty-type)
+    (progn
+      (define-key input-decode-map "\e[1;2A" [S-up])
+      (define-key input-decode-map "\e[1;2B" [S-down])
+      (define-key input-decode-map "\e[1;2C" [S-right])
+      (define-key input-decode-map "\e[1;2D" [S-left])
+      (define-key input-decode-map "\e[1;5A" [C-up])
+      (define-key input-decode-map "\e[1;5B" [C-down])
+      (define-key input-decode-map "\e[1;5C" [C-right])
+      (define-key input-decode-map "\e[1;5D" [C-left])
+      (define-key input-decode-map "\e[1;3A" [M-up])
+      (define-key input-decode-map "\e[1;3B" [M-down])
+      (define-key input-decode-map "\e[1;3C" [M-right])
+      (define-key input-decode-map "\e[1;3D" [M-left])))
+
 (provide 'emacsd-term-module)
 ;;; emacsd-term-module.el ends here

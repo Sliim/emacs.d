@@ -74,23 +74,9 @@
 ;; Ispell
 (setq ispell-program-name "ispell")
 
-;; Print config
-(setq ps-font-size 8
-      ps-header-font-size 9
-      ps-header-title-font-size 10
-      ps-line-number t
-      ps-line-number-font-size 8
-      ps-line-number-step 1
-      ps-print-color-p (quote black-white))
-
 ;; Changelog config
 (setq add-log-full-name "Sliim"
       add-log-mailing-address "sliim@mailoo.org")
-
-;; Auto mode
-(add-to-list 'auto-mode-alist '("\\.zsh\\'" . shell-script-mode))
-(add-to-list 'auto-mode-alist '("Cask" . emacs-lisp-mode))
-(add-to-list 'auto-mode-alist '("Vagrantfile" . ruby-mode))
 
 ;; reduce the frequency of garbage collection by making it happen on
 ;; each 50MB of allocated data (the default is on every 0.76MB)
@@ -98,23 +84,6 @@
 
 ;; config changes made through the customize UI will be store here
 (setq custom-file (expand-file-name "custom.el" emacsd-dir))
-
-;;Small fix for selection with shift+up
-; More infos: http://lists.gnu.org/archive/html/help-gnu-emacs/2011-05/msg00174.html
-(if (tty-type)
-    (progn
-      (define-key input-decode-map "\e[1;2A" [S-up])
-      (define-key input-decode-map "\e[1;2B" [S-down])
-      (define-key input-decode-map "\e[1;2C" [S-right])
-      (define-key input-decode-map "\e[1;2D" [S-left])
-      (define-key input-decode-map "\e[1;5A" [C-up])
-      (define-key input-decode-map "\e[1;5B" [C-down])
-      (define-key input-decode-map "\e[1;5C" [C-right])
-      (define-key input-decode-map "\e[1;5D" [C-left])
-      (define-key input-decode-map "\e[1;3A" [M-up])
-      (define-key input-decode-map "\e[1;3B" [M-down])
-      (define-key input-decode-map "\e[1;3C" [M-right])
-      (define-key input-decode-map "\e[1;3D" [M-left])))
 
 (provide 'emacsd-core)
 

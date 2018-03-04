@@ -47,6 +47,9 @@ This function run external shell command `python -m json.tool` on current region
     (nxml-mode)
     (indent-region (region-beginning) (region-end))))
 
+(add-to-list 'auto-mode-alist '("\\.zsh\\'" . shell-script-mode))
+(add-to-list 'auto-mode-alist '("Cask" . emacs-lisp-mode))
+
 (add-hook 'prog-mode-hook (lambda ()
                             (add-hook 'before-save-hook 'delete-trailing-whitespace)
                             (when (and (require 'auto-complete nil t) (require 'auto-complete-config nil t))

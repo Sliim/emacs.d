@@ -30,7 +30,9 @@
 ;;; Code:
 
 (require 'skbd)
+(require 'windmove)
 
+(windmove-default-keybindings)
 (skbd-global-mode)
 
 (defun emacsd-set-cmd-to-kbd (command keybinding)

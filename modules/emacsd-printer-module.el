@@ -1,4 +1,4 @@
-;;; emacsd-markdown-module.el --- Emacs.d modules.
+;;; emacsd-printer-module.el --- Emacs.d modules.
 ;;
 ;; Author: Sliim <sliim@mailoo.org>
 ;; Version: 1.0.0
@@ -8,7 +8,7 @@
 
 ;;; Commentary:
 
-;; Personal Emacs.d Markdown module
+;; Personal Emacs.d Printer module
 
 ;;; License:
 
@@ -29,18 +29,14 @@
 
 ;;; Code:
 
-(add-hook 'markdown-mode-hook (lambda ()
-                                (make-local-variable 'before-save-hook)
-                                (remove-hook 'before-save-hook 'delete-trailing-whitespace t)
-                                (define-key markdown-mode-map (kbd "C-c C-c p") 'markdown-preview-with-hf)))
+(setq ps-font-size 8
+      ps-header-font-size 9
+      ps-header-title-font-size 10
+      ps-line-number t
+      ps-line-number-font-size 8
+      ps-line-number-step 1
+      ps-print-color-p (quote black-white))
 
-(setq markdown-xhtml-header-content "<meta charset='utf-8'>")
+(provide 'emacsd-printer-module)
 
-(defun markdown-preview-with-hf (&optional output-buffer-name)
-  "Run `markdown' on the current buffer and preview the output 'OUTPUT-BUFFER-NAME' in a browser."
-  (interactive)
-  (browse-url-of-buffer (markdown-standalone markdown-output-buffer-name)))
-
-(provide 'emacsd-markdown-module)
-
-;;; emacsd-markdown-module.el ends here
+;;; emacsd-printer-module.el ends here
