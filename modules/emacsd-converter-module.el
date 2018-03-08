@@ -113,15 +113,21 @@
         (insert res)))
     (buffer-string)))
 
-(defun base64-encode-string (str)
+(defun b64-encode-string (str)
   "Base64 STR encode."
   (interactive "sString: ")
   (message "%S" (base64-encode-string str)))
 
-(defun base64-decode-string (str)
+(defalias 'b64-encode-region 'base64-encode-region
+  "Base64 region encode alias.")
+
+(defun b64-decode-string (str)
   "Base64 STR decode."
   (interactive "sString: ")
   (message "%S" (base64-decode-string str)))
+
+(defalias 'b64-decode-region 'base64-decode-region
+  "Base64 region decode alias.")
 
 (defun hex-encode-string (str)
   "Encode STR to hexadecimal."
