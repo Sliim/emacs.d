@@ -42,16 +42,13 @@
 (depends-on "elpy")
 (depends-on "nose")
 (depends-on "flymake-python-pyflakes")
-
 (depends-on "js-comint")
 (depends-on "flymake-jslint")
 (depends-on "js2-mode")
-
-(depends-on "php-mode")
-(depends-on "flymake-php")
-
 (depends-on "markdown-mode")
 (depends-on "puppet-mode")
+(depends-on "php-mode")
+(depends-on "flymake-php")
 (depends-on "yaml-mode")
 (depends-on "haskell-mode")
 (depends-on "go-mode")
@@ -89,7 +86,7 @@
 (depends-on "flx-ido")
 (depends-on "smex")
 (depends-on "anzu")
-(depends-on "ox-reveal")
+;; (depends-on "ox-reveal") FIXME: cannot fetch org dependency
 (depends-on "moe-theme")
 (depends-on "emamux")
 (depends-on "yari")
