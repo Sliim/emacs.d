@@ -46,7 +46,7 @@
 (require 'emacsd-powerline-module)
 (require 'emacsd-printer-module)
 (require 'emacsd-skbd-module)
-(require 'emacsd-reveal-module)
+;; (require 'emacsd-reveal-module)
 (require 'emacsd-helm-module)
 (require 'emacsd-notify-module)
 (require 'emacsd-mattermost-module)
