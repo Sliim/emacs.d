@@ -119,9 +119,12 @@ Start emacs!
 | ~C-o q s~  | ~quickrun-shell~          |
 
 **** magit
-| Keybinding | Command        |
-| ~C-o g s~  | ~magit-status~ |
-| ~C-o g l~  | ~magit-log~    |
+| Keybinding | Command                  |
+| ~C-o g s~  | ~magit-status~           |
+| ~C-o g b~  | ~magit-blame~            |
+| ~C-o g l~  | ~magit-log-buffer-file~  |
+| ~C-o g d~  | ~magit-diff-buffer-file~ |
+| ~C-o g p~  | ~magit-process-buffer~   |
 
 **** emamux
 | Keybinding | Command                       |
