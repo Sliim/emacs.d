@@ -99,6 +99,7 @@
 (depends-on "sx")
 (depends-on "robe")
 (depends-on "helm-robe")
+(depends-on "fzf")
 
 (depends-on "docker")
 (depends-on "dockerfile-mode")
