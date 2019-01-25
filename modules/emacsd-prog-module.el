@@ -32,6 +32,7 @@
 (require 'multiple-cursors)
 (require 'restclient)
 (require 'flycheck)
+(require 'smartparens-config)
 
 (defun emacsd-json-pretty-format ()
   "Print json string into an human readable format.
@@ -62,6 +63,8 @@ This function run external shell command `python -m json.tool` on current region
                               (auto-complete-mode t))))
 
 (setq flycheck-emacs-lisp-load-path 'inherit)
+
+(add-hook 'prog-mode-hook #'smartparens-mode)
 
 (provide 'emacsd-prog-module)
 
