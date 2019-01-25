@@ -76,32 +76,6 @@
       recentf-max-menu-items 15)
 (recentf-mode +1)
 
-;; automatically save buffers associated with files on buffer switch
-;; and on windows switch
-(defun prelude-auto-save-command ()
-  "Save the current buffer if `prelude-auto-save' is not nil."
-  (when buffer-file-name
-    (buffer-modified-p (current-buffer))
-    (file-writable-p buffer-file-name)
-    (save-buffer)))
-
-(defmacro advise-commands (advice-name commands &rest body)
-  "Apply advice named ADVICE-NAME to multiple COMMANDS.
-
-The body of the advice is in BODY."
-  `(progn
-     ,@(mapcar (lambda (command)
-                 `(defadvice ,command (before ,(intern (concat (symbol-name command) "-" advice-name)) activate)
-                    ,@body))
-               commands)))
-
-;; advise all window switching functions
-(advise-commands "auto-save"
-                 (switch-to-buffer other-window windmove-up windmove-down windmove-left windmove-right)
-                 (prelude-auto-save-command))
-
-(add-hook 'mouse-leave-buffer-hook 'prelude-auto-save-command)
-
 ;; highlight the current line
 (global-hl-line-mode +1)
 
@@ -215,13 +189,6 @@ The body of the advice is in BODY."
 (require 'whitespace)
 (setq whitespace-line-column 80) ;; limit line length
 (setq whitespace-style '(face tabs empty trailing lines-tail))
-
-(defun prelude-enable-whitespace ()
-  "Enable `whitespace-mode' if `prelude-whitespace' is not nil."
-  (when prelude-whitespace
-    ;; keep the whitespace decent all the time (in this buffer)
-    (add-hook 'before-save-hook 'prelude-cleanup-maybe nil t)
-    (whitespace-mode +1)))
 
 ;; sensible undo
 (require 'undo-tree)

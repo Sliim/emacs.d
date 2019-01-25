@@ -6,10 +6,7 @@ My .emacs.d/ home directory.
 
 This repository contains my emacs24 configuration.
 
-It's largely inspired from [[https://github.com/bbatsov/prelude/][Prelude]] that I have used few years!
-
-I have ported my old [[https://github.com/Sliim/prelude-personal][prelude-personal]] configuration into a from scratch repository, to have a fresh, faster emacs configuration.
-Prelude fonctionnalities may be added by cloning git submodules.
+It's largely inspired from [[https://github.com/bbatsov/prelude/][Prelude]] and my old [[https://github.com/Sliim/prelude-personal][prelude-personal]] that I have used few years!
 
 ** Installation
 
@@ -27,7 +24,6 @@ cask install
 *** Git Submodules
 
 Submodules includes:
-  - [[https://github.com/bbatsov/prelude][Prelude]] (core functions and prelude's modules will be available)
   - [[https://github.com/hakimel/reveal.js][Reveal.js]]
 
 Clone submodule:
@@ -52,13 +48,6 @@ Start emacs!
 
 - ~modules.el~
   Contains enabled modules definitions. Simply require provided module..
-
-- ~prelude/~
-  Is [[https://github.com/bbatsov/prelude][prelude]] project, this directory will be present only if you install git submodules, it contains prelude repository.
-  There is a prelude modules in modules/ directory to enable prelude's features. Enable it and prelude-core.el and defined prelude's modules will be loaded.
-
-- ~prelude-modules.el~
-  Set of prelude's modules to enable.
 
 - ~reveal.js/~
   Reveal.js code source, will be present only if you install submodules.
@@ -166,8 +155,7 @@ Start emacs!
 | ~C-x g~     | ~magit-status~        |
 | ~C-c h~     | ~helm-custom~         |
 
-*** Prelude module
-| Keybinding | Command                                    |
-| ~C-c d~    | ~prelude-duplicate-current-line-or-region~ |
-| ~C-c b~    | ~prelude-switch-to-previous-buffer~        |
-|            |                                            |
+*** Crux module
+| Keybinding | Command                                 |
+| ~C-c d~    | ~crux-duplicate-current-line-or-region~ |
+| ~C-c b~    | ~crux-switch-to-previous-buffer~        |

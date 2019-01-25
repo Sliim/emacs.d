@@ -38,6 +38,7 @@
 (depends-on "s")
 (depends-on "dash")
 (depends-on "diminish")
+(depends-on "crux")
 
 (depends-on "elpy")
 (depends-on "nose")

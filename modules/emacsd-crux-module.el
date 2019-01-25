@@ -1,14 +1,16 @@
-;;; prelude-modules.el --- Emacs.d.
+;;; emacsd-crux-module.el --- Emacs.d modules.
 ;;
 ;; Author: Sliim <sliim@mailoo.org>
 ;; Version: 1.0.0
-;; Keywords: emacs.d
+;; Keywords: emacs.d modules
 
 ;; This file is not part of GNU Emacs.
 
 ;;; Commentary:
 
-;; Personal Emacs Prelude modules
+;; Crux module.
+;; Enable some cool stuff from crux
+;;     https://github.com/bbatsov/crux/
 
 ;;; License:
 
@@ -29,8 +31,12 @@
 
 ;;; Code:
 
-(require 'prelude-lisp)
-(require 'prelude-common-lisp)
-(require 'prelude-emacs-lisp)
+(require 'crux)
+(require 'emacsd-skbd-module)
 
-;;; prelude-modules.el ends here
+(define-key skbd-mode-map (kbd "C-c d") 'crux-duplicate-current-line-or-region)
+(define-key skbd-mode-map (kbd "C-c b") 'crux-switch-to-previous-buffer)
+
+(provide 'emacsd-crux-module)
+
+;;; emacsd-crux-module.el ends here

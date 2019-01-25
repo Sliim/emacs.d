@@ -48,15 +48,6 @@
 
 (add-to-list 'completion-ignored-extensions ".rbc")
 
-(eval-after-load 'ruby-mode
-  '(progn
-     (defun prelude-ruby-mode-defaults ()
-       (subword-mode +1))
-
-     (setq prelude-ruby-mode-hook 'prelude-ruby-mode-defaults)
-     (add-hook 'ruby-mode-hook (lambda ()
-                                 (run-hooks 'prelude-ruby-mode-hook)))))
-
 (provide 'emacsd-ruby-module)
 
 ;;; emacsd-ruby-module.el ends here

@@ -29,7 +29,7 @@
 
 ;;; Code:
 
-(require 'emacsd-prelude-module)
+(require 'emacsd-crux-module)
 (require 'emacsd-prog-module)
 (require 'emacsd-pyenv-module)
 (require 'emacsd-python-module)
