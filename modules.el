@@ -54,6 +54,8 @@
 (require 'emacsd-magit-module)
 (require 'emacsd-converter-module)
 (require 'emacsd-hash-module)
+(require 'emacsd-iedit-module)
+(require 'emacsd-quickrun-module)
 
 ;;(require 'emacsd-moe-theme-module)
 (require 'emacsd-blue-theme-module)
