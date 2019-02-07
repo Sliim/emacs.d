@@ -29,6 +29,7 @@
 
 ;;; Code:
 
+(require 'emacsd-tls-hardening-module)
 (require 'emacsd-crux-module)
 (require 'emacsd-prog-module)
 (require 'emacsd-pyenv-module)
