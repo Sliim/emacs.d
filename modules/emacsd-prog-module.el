@@ -65,6 +65,7 @@ This function run external shell command `python -m json.tool` on current region
 (setq flycheck-emacs-lisp-load-path 'inherit)
 
 (add-hook 'prog-mode-hook #'smartparens-mode)
+(add-hook 'prog-mode-hook 'show-paren-mode)
 
 (provide 'emacsd-prog-module)
 
