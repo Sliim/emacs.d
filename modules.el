@@ -46,6 +46,7 @@
 (require 'emacsd-popwin-module)
 (require 'emacsd-powerline-module)
 (require 'emacsd-printer-module)
+(require 'emacsd-projectile-module)
 (require 'emacsd-skbd-module)
 ;; (require 'emacsd-reveal-module)
 (require 'emacsd-helm-module)

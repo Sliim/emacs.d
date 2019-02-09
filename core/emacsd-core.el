@@ -62,15 +62,6 @@
       vc-follow-symlinks t
       inhibit-startup-screen t)
 
-(require 'projectile)
-(require 'diminish)
-(setq projectile-cache-file (expand-file-name "projectile.cache" emacsd-var-dir))
-(setq projectile-known-projects-file (expand-file-name "projectile-bookmarks.eld" emacsd-var-dir))
-(projectile-global-mode t)
-(diminish 'projectile-mode "Prjl")
-(add-to-list 'projectile-globally-ignored-directories ".project")
-(setq projectile-globally-ignored-files '())
-
 ;; Ispell
 (setq ispell-program-name "ispell")
 
