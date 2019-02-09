@@ -62,6 +62,16 @@
       vc-follow-symlinks t
       inhibit-startup-screen t)
 
+;; Src: https://stackoverflow.com/questions/8412144/c-a-to-go-\
+;; to-the-first-character-in-emacs-using-ipython-mode
+(defun beginning-or-indent ()
+  "Go to beginning or indentation."
+  (interactive)
+  (let ((previous-point (point)))
+    (back-to-indentation)a
+    (if (equal (point) previous-point) (move-beginning-of-line 1))))
+(global-set-key (kbd "C-a") 'beginning-or-indent)
+
 ;; Ispell
 (setq ispell-program-name "ispell")
 
