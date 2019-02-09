@@ -67,9 +67,9 @@
 (defun beginning-or-indent ()
   "Go to beginning or indentation."
   (interactive)
-  (let ((previous-point (point)))
-    (back-to-indentation)a
-    (if (equal (point) previous-point) (move-beginning-of-line 1))))
+  (if (eq (current-column) 0)
+      (back-to-indentation)
+    (move-beginning-of-line 1)))
 (global-set-key (kbd "C-a") 'beginning-or-indent)
 
 ;; Ispell
