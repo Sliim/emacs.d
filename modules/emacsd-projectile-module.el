@@ -36,7 +36,7 @@
       projectile-known-projects-file (expand-file-name "projectile-bookmarks.eld" emacsd-var-dir)
       projectile-globally-ignored-files '())
 
-(projectile-global-mode t)
+(projectile-mode)
 (diminish 'projectile-mode "Prjl")
 
 (add-to-list 'projectile-globally-ignored-directories ".project")
