@@ -30,12 +30,12 @@
 ;;; Code:
 
 (require 'package)
-(defun emacsd-init-packages()
-  "Initialize packages directory."
-  (add-to-list 'package-archives
-               '("melpa" . "http://melpa.milkbox.net/packages/") t)
-  (setq package-user-dir emacsd-elpa-dir)
-  (package-initialize))
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+;; (add-to-list 'package-archives
+;;              '("melpa" . "https://melpa.org/packages/") t)
+(setq package-user-dir emacsd-elpa-dir)
+(package-initialize)
 
 (require 'guru-mode)
 (add-hook 'prog-mode-hook 'guru-mode)
