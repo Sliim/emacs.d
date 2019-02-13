@@ -46,6 +46,7 @@
 (depends-on "js-comint")
 (depends-on "flymake-jslint")
 (depends-on "js2-mode")
+(depends-on "jq-mode")
 (depends-on "markdown-mode")
 (depends-on "puppet-mode")
 (depends-on "php-mode")
