@@ -33,7 +33,7 @@
 (require 'windmove)
 
 (windmove-default-keybindings)
-(skbd-global-mode)
+(skbd-mode)
 
 (defun emacsd-set-cmd-to-kbd (command keybinding)
   "Bind COMMAND to a KEYBINDING quickly."

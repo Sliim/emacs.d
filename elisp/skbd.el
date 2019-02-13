@@ -101,16 +101,12 @@
   "Keymap for Skbd mode.")
 
 ;;;###autoload
-(define-globalized-minor-mode skbd-global-mode
-  skbd-mode
-  skbd-mode 1)
-
-;;;###autoload
 (define-minor-mode skbd-mode
   "Minor mode for Sliim's keybindings map."
   :lighter " Skbd"
   :keymap skbd-mode-map
-  :group 'skbd)
+  :group 'skbd
+  :global t)
 
 (provide 'skbd)
 
