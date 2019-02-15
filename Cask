@@ -33,6 +33,7 @@
 ;;; Code:
 
 (source gnu)
+(source melpa)
 (source melpa-stable)
 
 (depends-on "s")
