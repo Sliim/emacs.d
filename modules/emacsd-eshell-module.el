@@ -40,6 +40,17 @@
   (interactive)
   (magit-status (eshell/pwd)))
 
+(defun eshell/run (cmd)
+  "Run given CMD in eshell. Source https://www.emacswiki.org/emacs/EshellControlFromOtherBuffer "
+  (interactive)
+  (eshell)
+  (switch-to-buffer eshell-buffer-name)
+  (end-of-buffer)
+  (eshell-kill-input)
+  (insert cmd)
+  (eshell-send-input)
+  (end-of-buffer))
+
 (defun git-current-branch (pwd)
   "Return current git branch as a string in current directory `PWD`."
   (when (and (eshell-search-path "git")
