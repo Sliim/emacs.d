@@ -89,6 +89,7 @@ Start emacs!
 | ~C-o h w~  | ~helm-swoop~            |
 | ~C-o h y~  | ~helm-c-yas-complete~   |
 | ~C-o h b~  | ~helm-bookmarks~        |
+| ~C-o h R~  | ~helm-recentf~          |
 
 **** project
 | Keybinding  | Command                                           |

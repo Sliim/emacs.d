@@ -55,6 +55,7 @@
       (define-key prefix-map (kbd "h y") 'helm-c-yas-complete)
       (define-key prefix-map (kbd "h b") 'helm-bookmarks)
       (define-key prefix-map (kbd "h m") 'helm-man-woman)
+      (define-key prefix-map (kbd "h R") 'helm-recentf)
       (define-key prefix-map (kbd "p d") 'direx-project:jump-to-project-root-other-window)
       (define-key prefix-map (kbd "f n") 'flymake-goto-next-error)
       (define-key prefix-map (kbd "f p") 'flymake-goto-prev-error)
