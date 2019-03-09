@@ -102,6 +102,7 @@
 (depends-on "robe")
 (depends-on "helm-robe")
 (depends-on "fzf")
+(depends-on "es-mode")
 
 (depends-on "docker")
 (depends-on "dockerfile-mode")
