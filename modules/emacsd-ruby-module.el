@@ -48,6 +48,14 @@
 
 (add-to-list 'completion-ignored-extensions ".rbc")
 
+(eval-after-load "hideshow"
+  '(add-to-list 'hs-special-modes-alist
+                `(ruby-mode
+                  ,(rx (or "def" "class" "module" "do" "{" "["))
+                  ,(rx (or "}" "]" "end"))
+                  ,(rx (or "#" "=begin"))
+                  ruby-forward-sexp nil)))
+
 (provide 'emacsd-ruby-module)
 
 ;;; emacsd-ruby-module.el ends here
