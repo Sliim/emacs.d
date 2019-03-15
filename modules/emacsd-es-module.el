@@ -33,6 +33,9 @@
 (add-to-list 'auto-mode-alist '("\\.es$" . es-mode))
 (add-hook 'es-result-mode-hook 'hs-minor-mode)
 
+(when (fboundp 'json-pretty-print-buffer)
+  (add-hook 'es-result-mode-hook 'json-pretty-print-buffer))
+
 (provide 'emacsd-es-module)
 
 ;;; emacsd-es-module.el ends here
