@@ -61,6 +61,7 @@
 (require 'emacsd-es-module)
 
 ;;(require 'emacsd-moe-theme-module)
+;;(require 'emacsd-cyberpunk-theme-module)
 (require 'emacsd-blue-theme-module)
 
 (require 'emacsd-term-module)

@@ -91,6 +91,7 @@
 (depends-on "anzu")
 ;; (depends-on "ox-reveal") FIXME: cannot fetch org dependency
 (depends-on "moe-theme")
+(depends-on "cyberpunk-theme")
 (depends-on "emamux")
 (depends-on "yari")
 (depends-on "restclient")
