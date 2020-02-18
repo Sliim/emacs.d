@@ -104,6 +104,7 @@
 (depends-on "helm-robe")
 (depends-on "fzf")
 (depends-on "es-mode")
+(depends-on "terraform-mode")
 
 (depends-on "docker")
 (depends-on "dockerfile-mode")
