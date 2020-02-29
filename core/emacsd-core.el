@@ -60,7 +60,8 @@
       scroll-step 1
       delete-trailing-lines t
       vc-follow-symlinks t
-      inhibit-startup-screen t)
+      inhibit-startup-screen t
+      ffap-machine-p-known 'reject)
 
 ;; Src: https://stackoverflow.com/questions/8412144/c-a-to-go-\
 ;; to-the-first-character-in-emacs-using-ipython-mode
