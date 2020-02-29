@@ -57,6 +57,7 @@
 (depends-on "go-mode")
 (depends-on "feature-mode")
 (depends-on "conkeror-minor-mode")
+(depends-on "gl-conf-mode")
 
 (depends-on "magit")
 (depends-on "gitignore-mode")
