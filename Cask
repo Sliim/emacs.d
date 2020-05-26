@@ -58,6 +58,7 @@
 (depends-on "feature-mode")
 (depends-on "conkeror-minor-mode")
 (depends-on "gl-conf-mode")
+(depends-on "lua-mode")
 
 (depends-on "magit")
 (depends-on "gitignore-mode")
