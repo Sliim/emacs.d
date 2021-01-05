@@ -42,7 +42,6 @@
 (depends-on "crux")
 
 (depends-on "elpy")
-(depends-on "nose")
 (depends-on "flymake-python-pyflakes")
 (depends-on "js-comint")
 (depends-on "flymake-jslint")
