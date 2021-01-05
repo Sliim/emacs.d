@@ -29,10 +29,11 @@
 
 ;;; Code:
 
-(package-initialize)
-
 (when (version< emacs-version "24.1")
   (error "Requires at least GNU Emacs 24.1"))
+
+(when (version< emacs-version "27")
+  (package-initialize))
 
 (defvar emacsd-dir (file-name-directory load-file-name)
   "The root dir of Emacs.")
