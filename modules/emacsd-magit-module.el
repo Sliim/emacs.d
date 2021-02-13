@@ -30,8 +30,18 @@
 ;;; Code:
 
 (require 'magit)
-(setq magit-repository-directories '("~/codz")
-      magit-repository-directories-depth 3)
+(setq magit-repository-directories '(("~/codz" . 4)
+                                     ("~/stuffz" . 2))
+      magit-repolist-columns '(("Name"    30 magit-repolist-column-ident nil)
+                               ("Version" 25 magit-repolist-column-version nil)
+                               ("B<U"      3 magit-repolist-column-unpulled-from-upstream
+                                ((:right-align t)
+                                 (:help-echo "Upstream changes not in branch")))
+                               ("B>U"      3 magit-repolist-column-unpushed-to-upstream
+                                ((:right-align t)
+                                 (:help-echo "Local changes not in upstream")))
+                               ("Path"    99 magit-repolist-column-path nil))
+)
 
 (provide 'emacsd-magit-module)
 
