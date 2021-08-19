@@ -81,6 +81,10 @@
 ;; Load modules
 (load (expand-file-name "modules.el" emacsd-dir))
 
+;; Set and load custom file
+(setq custom-file (expand-file-name "custom.el" emacsd-dir))
+(load custom-file)
+
 ;; Load private config if exists
 (let ((user-config-file "~/.emacsrc"))
   (when (file-exists-p user-config-file)

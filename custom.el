@@ -43,8 +43,4 @@
  ;; If there is more than one, they won't work right.
  )
 
-(custom-theme-set-faces
- 'moe-dark
- `(default ((t (:height 85 :width normal)))))
-
 ;;; custom.el ends here
